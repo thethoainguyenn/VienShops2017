@@ -53,9 +53,11 @@ namespace VienShops.Controllers
             return View(productList);
         }
         // Show products list giao diện 2
-        public ActionResult ShowProductListTheme2(string id)
+        public ActionResult ShowProductListTheme2(int? page,string id)
         {
-            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList().OrderBy(n => n.TENSP).ToPagedList(pageNumber, pageSize);
             ViewBag.ID = id;
             return View(productList);
         }
