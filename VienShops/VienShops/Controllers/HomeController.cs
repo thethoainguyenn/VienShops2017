@@ -51,6 +51,7 @@ namespace VienShops.Controllers
         public ActionResult ShowProductListTheme2(string id)
         {
             var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+            ViewBag.ID = id;
             return View(productList);
         }
         // Menu Trái của Loại sản phẩm 
