@@ -100,27 +100,24 @@
                                 <div class="productname">
                                     @item.TENSP
                                 </div>
-                                <p>
+                                @*<p>
                                     <img src="images/star.png" alt="">
-                                    <a href="#" class="review_num">
-                                        02 Review(s)
-                                    </a>
-                                </p>
+                                </p>*@
                                 <p>
                                      @item.MOTA
                                 </p>
                                 <div class="list_bottom">
                                     <div class="price">
                                         <span class="new_price">
-                                            @item.GIA
+                                           @String.Format("{0:0,0}", item.GIA) 
                                             <sup>
-                                                $
+                                                VND
                                             </sup>
                                         </span>
                                         <span class="old_price">
                                             450.00
                                             <sup>
-                                                $
+                                               VND
                                             </sup>
                                         </span>
                                     </div>
