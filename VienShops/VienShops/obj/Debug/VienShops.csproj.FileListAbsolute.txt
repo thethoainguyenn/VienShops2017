@@ -239,6 +239,12 @@ C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.csproj.Gener
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.csproj.CoreCompileInputs.cache
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.dll
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.pdb
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.IO.Compression.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\VBCSCompiler.exe
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\ApplicationInsights.config
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\csc.exe
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\csc.exe.config
@@ -247,13 +253,9 @@ C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\csi.e
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\csi.exe.config
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\csi.rsp
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -263,7 +265,6 @@ C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Syste
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.Diagnostics.Process.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.IO.Compression.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -286,11 +287,7 @@ C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\Syste
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\vbc.exe
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\vbc.exe.config
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\vbc.rsp
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\VBCSCompiler.exe
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\VienShops.dll.config
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\VienShops.dll
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\VienShops.pdb
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Antlr3.Runtime.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\EntityFramework.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\EntityFramework.SqlServer.dll
@@ -317,6 +314,8 @@ C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.Ow
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Newtonsoft.Json.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Owin.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\PagedList.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\PagedList.Mvc.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.Helpers.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.Mvc.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.Optimization.dll
@@ -326,6 +325,8 @@ C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.W
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.WebPages.Razor.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\WebGrease.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\PagedList.xml
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\PagedList.Mvc.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.Helpers.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.Mvc.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\System.Web.Optimization.xml
@@ -354,8 +355,11 @@ C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.AI
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\Microsoft.AI.Web.xml
-C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\obj\Debug\VienShops.csprojResolveAssemblyReference.cache
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\obj\Debug\VienShops.Migrations.migration_change.resources
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\obj\Debug\VienShops.csproj.GenerateResource.Cache
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\obj\Debug\VienShops.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\obj\Debug\VienShops.pdb
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\VienShops.dll.config
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\VienShops.dll
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\bin\VienShops.pdb
+C:\Users\THOAILUN\Desktop\Working\VienShops\VienShops\VienShops\obj\Debug\VienShops.csprojResolveAssemblyReference.cache

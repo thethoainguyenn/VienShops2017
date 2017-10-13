@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VienShops.Models;
-
+// Khai báo thư viện phân trang
+using PagedList;
+using PagedList.Mvc;
 namespace VienShops.Controllers
 {
     public class HomeController : Controller
@@ -39,10 +41,13 @@ namespace VienShops.Controllers
             return PartialView(products);
         }
         // Show products list
-        public ActionResult ShowProductList(string id)
+        public ActionResult ShowProductList(int? page, string id)
         {
+            int pageSize = 9;
+            // Nếu trang bé hơn 9 trả về 1 trang
+            int pageNumber = (page ?? 1);
             //var tenLoai = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == id);
-            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList().OrderBy(n => n.TENSP).ToPagedList(pageNumber, pageSize);
             // Gán mã, khi load form lưu id
             ViewBag.ID = id;
             return View(productList);

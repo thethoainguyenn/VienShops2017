@@ -1,5 +1,6 @@
 ﻿@using VienShops.Models;
-@model List<SANPHAM>
+@using PagedList.Mvc;
+@model PagedList.IPagedList<SANPHAM>
 
 @{
     ViewBag.Title = "ShowProductList";
@@ -71,23 +72,7 @@
                                 </div>*@
                         </div>
                         <div class="pager">
-                            <a href="#" class="prev-page">
-                                <i class="fa fa-angle-left">
-                                </i>
-                            </a>
-                            <a href="#" class="active">
-                                1
-                            </a>
-                            <a href="#">
-                                2
-                            </a>
-                            <a href="#">
-                                3
-                            </a>
-                            <a href="#" class="next-page">
-                                <i class="fa fa-angle-right">
-                                </i>
-                            </a>
+                            @Html.PagedListPager(Model, page => Url.Action("ShowProductList",new { page = page }))
                         </div>
                     </div>
                     <div class="clearfix">
@@ -174,23 +159,7 @@
                                                             </div>*@
                         </div>
                         <div class="pager">
-                            <a href="#" class="prev-page">
-                                <i class="fa fa-angle-left">
-                                </i>
-                            </a>
-                            <a href="#" class="active">
-                                1
-                            </a>
-                            <a href="#">
-                                2
-                            </a>
-                            <a href="#">
-                                3
-                            </a>
-                            <a href="#" class="next-page">
-                                <i class="fa fa-angle-right">
-                                </i>
-                            </a>
+                            @Html.PagedListPager(Model, page => Url.Action("ShowProductList", new { page = page }))
                         </div>
                     </div>
                     <div class="clearfix">
