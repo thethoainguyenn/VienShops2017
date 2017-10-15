@@ -7,7 +7,8 @@ namespace VienShops.Models
     {
         [Required]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		public string Email { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -33,7 +34,7 @@ namespace VienShops.Models
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(Name = "Lưu trình duyệt ?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }
@@ -43,28 +44,35 @@ namespace VienShops.Models
     {
         [Required]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		public string Email { get; set; }
     }
 
-    public class LoginViewModel
-    {
-        [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+	public class LoginViewModel
+	{
+		[Required]
+		[Display(Name = "Email")]
+		[EmailAddress]
+		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		public string Email { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
-        public string Password { get; set; }
+		[Required]
+		[DataType(DataType.Password)]
+		[Display(Name = "Password")]
+		public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
-        public bool RememberMe { get; set; }
+		[Display(Name = "Remember me?")]
+		public bool RememberMe { get; set; }
+
     }
 
     public class RegisterViewModel
     {
-        [Required]
+		[Required]
+		[Display(Name = "Tên")]
+		[StringLength(255)]
+		public string FullName { get; set; }
+		[Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -77,16 +85,21 @@ namespace VienShops.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "Nhập lại mật khẩu không đúng ")]
         public string ConfirmPassword { get; set; }
-    }
+		[Required]
+		[Display(Name = "Địa chỉ")]
+		[StringLength(255)]
+		public string Adress { get; set; }
+	}
 
     public class ResetPasswordViewModel
     {
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		public string Email { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -96,7 +109,7 @@ namespace VienShops.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "Nhập lại mật khẩu không đúng .")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
@@ -107,6 +120,7 @@ namespace VienShops.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		public string Email { get; set; }
     }
 }
