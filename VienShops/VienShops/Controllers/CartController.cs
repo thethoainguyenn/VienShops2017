@@ -62,7 +62,7 @@ namespace VienShops.Controllers
             Cart c = listCart.SingleOrDefault(n => n.sMaSP == sMaSP);
             if(c != null)
             {
-                c.iSoLuong = int.Parse(f["txtSoLuong"].ToString());
+                c.iSoLuong = int.Parse(f["txtQuantity"].ToString());
 
             }
             return View("Cart");
@@ -98,6 +98,7 @@ namespace VienShops.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            ViewBag.Total = Total();
             List<Cart> listCart = GetCart();
             return View(listCart);
         }
@@ -124,5 +125,15 @@ namespace VienShops.Controllers
             return dTotal;
         }
         // Đếm số lượng trong giỏ hàng hiển thị ở Header, icon cart
+        public ActionResult CartLayoutHeader()
+        {
+            if(Total() == 0)
+            {
+                return PartialView();
+            }
+            ViewBag.AllQuantity = AllQuantity();
+            ViewBag.Total = Total();
+            return PartialView();
+        }
     }
 }
