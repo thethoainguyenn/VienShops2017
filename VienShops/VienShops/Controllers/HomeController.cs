@@ -83,6 +83,11 @@ namespace VienShops.Controllers
             // Truyền vào model là sản phẩm
             return View(sp);
         }
-
+        // Sản phẩm theo loại - Sản phẩm liên quan khi xem trang chi tiết - Sản phẩm theo loại
+        //public ActionResult ProductType(string MaLoaiSP = 0)
+        //{
+        //   LOAISANPHAM sp = Db.LOAISANPHAMs.SingleOrDefault(n=>n.MALOAISP == MaLoaiSP)
+        //}
+        // -> Đang làm
     }
 }
