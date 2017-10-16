@@ -9,11 +9,12 @@ namespace VienShops.Controllers
     public class CartController : Controller
     {
         DBVienShopsDataContext Db = new DBVienShopsDataContext();
+        #region Cart
         // GET Cart & Check Cart
         public List<Cart> GetCart()
         {
             List<Cart> listCart = Session["Cart"] as List<Cart>;
-            if(listCart == null)
+            if (listCart == null)
             {
                 // if cart null -> create session cart
                 listCart = new List<Cart>();
@@ -26,7 +27,7 @@ namespace VienShops.Controllers
         public ActionResult AddCart(string sMaSP, string sUrl)
         {
             SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sMaSP);
-            if(sanpham == null)
+            if (sanpham == null)
             {
                 Response.StatusCode = 404;
                 return null;
@@ -35,7 +36,7 @@ namespace VienShops.Controllers
             List<Cart> listCart = GetCart();
             // Tìm xem sản phẩm có trong giỏ hàng hay chưa - session
             Cart c = listCart.Find(n => n.sMaSP == sMaSP);
-            if(c == null)
+            if (c == null)
             {
                 c = new Cart(sMaSP);
                 // Add sản phẩm mới thêm vào list
@@ -60,7 +61,7 @@ namespace VienShops.Controllers
             }
             List<Cart> listCart = GetCart();
             Cart c = listCart.SingleOrDefault(n => n.sMaSP == sMaSP);
-            if(c != null)
+            if (c != null)
             {
                 c.iSoLuong = int.Parse(f["txtQuantity"].ToString());
 
@@ -82,11 +83,11 @@ namespace VienShops.Controllers
             if (c != null)
             {
                 listCart.RemoveAll(n => n.sMaSP == sMaSP);
-               
+
             }
-            if(listCart.Count == 0)
+            if (listCart.Count == 0)
             {
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             return RedirectToAction("Cart");
         }
@@ -94,7 +95,7 @@ namespace VienShops.Controllers
         public ActionResult Cart()
         {
             // If gio hàng null trả về trang chủ
-            if(Session["Cart"] == null)
+            if (Session["Cart"] == null)
             {
                 return RedirectToAction("Index", "Home");
             }
@@ -102,12 +103,12 @@ namespace VienShops.Controllers
             List<Cart> listCart = GetCart();
             return View(listCart);
         }
-       // Xây dựng tính tổng số lượng
-       private int AllQuantity()
+        // Xây dựng tính tổng số lượng
+        private int AllQuantity()
         {
             int iAllQuantity = 0;
             List<Cart> listCart = Session["Cart"] as List<Cart>;
-            if(listCart != null)
+            if (listCart != null)
             {
                 iAllQuantity = listCart.Sum(n => n.iSoLuong);
             }
@@ -127,7 +128,7 @@ namespace VienShops.Controllers
         // Đếm số lượng trong giỏ hàng hiển thị ở Header, icon cart
         public ActionResult CartLayoutHeader()
         {
-            if(Total() == 0)
+            if (Total() == 0)
             {
                 return PartialView();
             }
@@ -136,4 +137,8 @@ namespace VienShops.Controllers
             return PartialView();
         }
     }
+    #endregion
+    #region Order
+
+    #endregion
 }

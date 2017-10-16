@@ -74,8 +74,14 @@ namespace VienShops.Controllers
         // Chi tiết sản phẩm 
         public ActionResult Detail(string id)
         {
-            var detail = Db.SANPHAMs.Where(n => n.MASP == id).ToList();
-            return View(detail);
+            SANPHAM sp = Db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+            if(sp == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            // Truyền vào model là sản phẩm
+            return View(sp);
         }
 
     }

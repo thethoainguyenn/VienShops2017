@@ -75,12 +75,15 @@
                     <ul class="products-listItem">
                         @foreach (var item in Model)
                         {
+
                             <li class="products">
                                 <div class="offer">
                                     New
                                 </div>
                                 <div class="thumbnail">
-                                    <img src="~/images/products/large/@item.URL" alt="Product Name">
+                                    <a href="@Url.Action("Detail","Home", new { @id = item.MASP })">
+                                        <img src="~/images/products/large/@item.URL" alt="Product Name">
+                                    </a>
                                 </div>
                                 <div class="product-list-description">
                                     <div class="productname">
