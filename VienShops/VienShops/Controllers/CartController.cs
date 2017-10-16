@@ -123,5 +123,6 @@ namespace VienShops.Controllers
             }
             return dTotal;
         }
+        // Đếm số lượng trong giỏ hàng hiển thị ở Header, icon cart
     }
 }

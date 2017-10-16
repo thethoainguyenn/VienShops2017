@@ -92,13 +92,13 @@
                             </td>
                             <td>
                                 <h5>
-                                    @String.Format("{0:0,0}", @item.dDonGia.ToString()) VND
+                                    @String.Format("{0:0,0}", @item.dDonGia) VND
                                 </h5>
                             </td>
                             <td>
                                 <select name="">
-                                    <option selected value="1">
-                                        1
+                                    <option selected value="@item.iSoLuong">
+                                        @item.iSoLuong
                                     </option>
                                     <option value="2">
                                         2
@@ -111,7 +111,7 @@
                             <td>
                                 <h5>
                                     <strong class="red">
-                                       @String.Format("{0:0,0}", @item.dThanhTien.ToString()) VND
+                                       @String.Format("{0:0,0}", @item.dThanhTien) VND
                                     </strong>
                                 </h5>
                             </td>

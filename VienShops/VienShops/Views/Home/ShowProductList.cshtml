@@ -72,7 +72,7 @@
                                 </div>*@
                         </div>
                         <div class="pager">
-                            @Html.PagedListPager(Model, page => Url.Action("ShowProductList",new { page = page }))
+                            @Html.PagedListPager(Model, page => Url.Action("ShowProductList", new { page = page }))
                         </div>
                     </div>
                     <div class="clearfix">
@@ -94,12 +94,15 @@
                                         @item.TENSP
                                     </div>
                                     <h4 class="price">
-                                        @String.Format("{0:0,0}",item.GIA) VND
+                                        @String.Format("{0:0,0}", item.GIA) VND
                                     </h4>
                                     <div class="button_group">
-                                        <button class="button add-cart" type="button">
-                                            Thêm vào giỏ hàng
-                                        </button>
+                                        @using (Html.BeginForm("AddCart", "Cart", new { @sMaSP = @item.MASP, @sUrl = Request.Url.ToString() }))
+                                        {
+                                            <button class="button add-cart" type="submit">
+                                                Thêm vào giỏ hàng
+                                            </button>
+                                        }
                                     </div>
                                 </div>
                             </div>
