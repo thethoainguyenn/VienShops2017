@@ -65,7 +65,7 @@ namespace VienShops.Controllers
                 c.iSoLuong = int.Parse(f["txtQuantity"].ToString());
 
             }
-            return View("Cart");
+            return RedirectToAction("Cart");
         }
         // Delete Cart
         public ActionResult DeleteCart(string sMaSP)

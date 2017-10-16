@@ -1,6 +1,6 @@
 ﻿@using VienShops.Models
 @model List<Cart>
-@{  
+@{
     ViewBag.Title = "Cart";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -40,87 +40,83 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                        <tr>
-                            <td>
-                                <img src="~/images/products/small/@item.sUrlHinh" alt="">
-                            </td>
-                            <td>
-                                <div class="shop-details">
-                                    <div class="productname">
-                                        @item.sTenSP
+                            <tr>
+                                <td>
+                                    <img src="~/images/products/small/@item.sUrlHinh" alt="">
+                                </td>
+                                <td>
+                                    <div class="shop-details">
+                                        <div class="productname">
+                                            @item.sTenSP
+                                        </div>
+                                        <p>
+                                            <img alt="" src="~/images/star.png">
+                                            <a class="review_num" href="#">
+                                                02 Review(s)
+                                            </a>
+                                        </p>
+                                        <div class="color-choser">
+                                            <span class="text">
+                                                Product Color :
+                                            </span>
+                                            <ul>
+                                                <li>
+                                                    <a class="red-bg" href="#">
+                                                        light red
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class=" yellow-bg" href="#">
+                                                        yellow"
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="black-bg " href="#">
+                                                        black
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="pink-bg" href="#">
+                                                        pink
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p>
+                                            Product Code :
+                                            <strong class="pcode">
+                                                Dress 050
+                                            </strong>
+                                        </p>
                                     </div>
-                                    <p>
-                                        <img alt="" src="~/images/star.png">
-                                        <a class="review_num" href="#">
-                                            02 Review(s)
-                                        </a>
-                                    </p>
-                                    <div class="color-choser">
-                                        <span class="text">
-                                            Product Color :
-                                        </span>
-                                        <ul>
-                                            <li>
-                                                <a class="red-bg" href="#">
-                                                    light red
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class=" yellow-bg" href="#">
-                                                    yellow"
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="black-bg " href="#">
-                                                    black
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="pink-bg" href="#">
-                                                    pink
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p>
-                                        Product Code :
-                                        <strong class="pcode">
-                                            Dress 050
+                                </td>
+                                <td>
+                                    <h5>
+                                        @String.Format("{0:0,0}", @item.dDonGia) VND
+                                    </h5>
+                                </td>
+                                @using (Html.BeginForm("UpdateCart", "Cart", new { @sMaSP = @item.sMaSP }))
+                                {
+                                <td>
+                                    @*Custom css - Edit Cart*@
+                                    @Html.TextBox("txtQuantity", @item.iSoLuong, new { @class = "updateQuantity" })
+                                    <input type="submit" value="Cập nhật" style="padding: 10px; margin-top: 10px;border-radius: 10px;background-color: #2c3e50;color: white;" />
+                                </td>
+                                }
+                                <td>
+                                    <h5>
+                                        <strong class="red">
+                                            @String.Format("{0:0,0}", @item.dThanhTien) VND
                                         </strong>
-                                    </p>
-                                </div>
-                            </td>
-                            <td>
-                                <h5>
-                                    @String.Format("{0:0,0}", @item.dDonGia) VND
-                                </h5>
-                            </td>
-                            <td>
-                                <select name="">
-                                    <option selected value="@item.iSoLuong">
-                                        @item.iSoLuong
-                                    </option>
-                                    <option value="2">
-                                        2
-                                    </option>
-                                    <option value="3">
-                                        3
-                                    </option>
-                                </select>
-                            </td>
-                            <td>
-                                <h5>
-                                    <strong class="red">
-                                       @String.Format("{0:0,0}", @item.dThanhTien) VND
-                                    </strong>
-                                </h5>
-                            </td>
-                            <td>
-                                <a href="#">
-                                    <img src="~/images/remove.png" alt="">
-                                </a>
-                            </td>
-                        </tr>
+                                    </h5>
+                                </td>
+                                <td>
+                                    @*Delete Cart*@
+                                    <a href="@Url.Action("DeleteCart", "Cart",new { @sMaSP = @item.sMaSP })">
+                                        <img src="~/images/remove.png" alt="">
+                                    </a>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                     <tfoot>
@@ -664,7 +660,7 @@
                                 </span>
                             </div>
                             <button>
-                               Thanh toán
+                                Thanh toán
                             </button>
                         </div>
                     </div>
