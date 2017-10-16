@@ -71,11 +71,6 @@ namespace VienShops.Controllers
         {
             return View();
         }
-        // Giỏ hàng 
-        public ActionResult Cart()
-        {
-            return View();
-        }
         // Chi tiết sản phẩm 
         public ActionResult Detail(string id)
         {
