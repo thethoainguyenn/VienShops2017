@@ -66,6 +66,7 @@
       <Column Name="MASP" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SIZE" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SANPHAM_CHITIETSANPHAM" Member="SANPHAM" ThisKey="MASP" OtherKey="MASP" Type="SANPHAM" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LOAISANPHAM" Member="LOAISANPHAMs">
@@ -73,6 +74,7 @@
       <Column Name="MALOAISP" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MALOAICHA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="TENLOAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="LOAISANPHAM_SANPHAM" Member="SANPHAMs" ThisKey="MALOAISP" OtherKey="MALOAISP" Type="SANPHAM" />
     </Type>
   </Table>
   <Table Name="dbo.SANPHAM" Member="SANPHAMs">
@@ -84,6 +86,8 @@
       <Column Name="MOTA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="CHATLIEU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="URL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SANPHAM_CHITIETSANPHAM" Member="CHITIETSANPHAMs" ThisKey="MASP" OtherKey="MASP" Type="CHITIETSANPHAM" />
+      <Association Name="LOAISANPHAM_SANPHAM" Member="LOAISANPHAM" ThisKey="MALOAISP" OtherKey="MALOAISP" Type="LOAISANPHAM" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

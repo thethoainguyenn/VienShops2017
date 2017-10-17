@@ -5,7 +5,7 @@
             <div class="thumbnail"><a href="@Url.Action("Detail","Home", new { @id = item.MASP })"><img src="~/images/products/large/@item.URL" alt="Product Name"></a></div>
             <div class="productname">@item.TENSP</div>
             <h4 class="price">@String.Format("{0:0,0}", @item.GIA)  VND</h4>
-            <h4>@item.MASP</h4>
+            
             <div class="button_group">
                 @using (Html.BeginForm("AddCart", "Cart", new { @sMaSP = @item.MASP, @sUrl = Request.Url.ToString() }))
                 {

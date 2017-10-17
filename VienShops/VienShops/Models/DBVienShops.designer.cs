@@ -1374,6 +1374,8 @@ namespace VienShops.Models
 		
 		private System.Nullable<int> _SOLUONG;
 		
+		private EntityRef<SANPHAM> _SANPHAM;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1388,6 +1390,7 @@ namespace VienShops.Models
 		
 		public CHITIETSANPHAM()
 		{
+			this._SANPHAM = default(EntityRef<SANPHAM>);
 			OnCreated();
 		}
 		
@@ -1402,6 +1405,10 @@ namespace VienShops.Models
 			{
 				if ((this._MASP != value))
 				{
+					if (this._SANPHAM.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMASPChanging(value);
 					this.SendPropertyChanging();
 					this._MASP = value;
@@ -1451,6 +1458,40 @@ namespace VienShops.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SANPHAM_CHITIETSANPHAM", Storage="_SANPHAM", ThisKey="MASP", OtherKey="MASP", IsForeignKey=true)]
+		public SANPHAM SANPHAM
+		{
+			get
+			{
+				return this._SANPHAM.Entity;
+			}
+			set
+			{
+				SANPHAM previousValue = this._SANPHAM.Entity;
+				if (((previousValue != value) 
+							|| (this._SANPHAM.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SANPHAM.Entity = null;
+						previousValue.CHITIETSANPHAMs.Remove(this);
+					}
+					this._SANPHAM.Entity = value;
+					if ((value != null))
+					{
+						value.CHITIETSANPHAMs.Add(this);
+						this._MASP = value.MASP;
+					}
+					else
+					{
+						this._MASP = default(string);
+					}
+					this.SendPropertyChanged("SANPHAM");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1484,6 +1525,8 @@ namespace VienShops.Models
 		
 		private string _TENLOAI;
 		
+		private EntitySet<SANPHAM> _SANPHAMs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1498,6 +1541,7 @@ namespace VienShops.Models
 		
 		public LOAISANPHAM()
 		{
+			this._SANPHAMs = new EntitySet<SANPHAM>(new Action<SANPHAM>(this.attach_SANPHAMs), new Action<SANPHAM>(this.detach_SANPHAMs));
 			OnCreated();
 		}
 		
@@ -1561,6 +1605,19 @@ namespace VienShops.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAISANPHAM_SANPHAM", Storage="_SANPHAMs", ThisKey="MALOAISP", OtherKey="MALOAISP")]
+		public EntitySet<SANPHAM> SANPHAMs
+		{
+			get
+			{
+				return this._SANPHAMs;
+			}
+			set
+			{
+				this._SANPHAMs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1579,6 +1636,18 @@ namespace VienShops.Models
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_SANPHAMs(SANPHAM entity)
+		{
+			this.SendPropertyChanging();
+			entity.LOAISANPHAM = this;
+		}
+		
+		private void detach_SANPHAMs(SANPHAM entity)
+		{
+			this.SendPropertyChanging();
+			entity.LOAISANPHAM = null;
 		}
 	}
 	
@@ -1602,6 +1671,10 @@ namespace VienShops.Models
 		
 		private string _URL;
 		
+		private EntitySet<CHITIETSANPHAM> _CHITIETSANPHAMs;
+		
+		private EntityRef<LOAISANPHAM> _LOAISANPHAM;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1624,6 +1697,8 @@ namespace VienShops.Models
 		
 		public SANPHAM()
 		{
+			this._CHITIETSANPHAMs = new EntitySet<CHITIETSANPHAM>(new Action<CHITIETSANPHAM>(this.attach_CHITIETSANPHAMs), new Action<CHITIETSANPHAM>(this.detach_CHITIETSANPHAMs));
+			this._LOAISANPHAM = default(EntityRef<LOAISANPHAM>);
 			OnCreated();
 		}
 		
@@ -1658,6 +1733,10 @@ namespace VienShops.Models
 			{
 				if ((this._MALOAISP != value))
 				{
+					if (this._LOAISANPHAM.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMALOAISPChanging(value);
 					this.SendPropertyChanging();
 					this._MALOAISP = value;
@@ -1767,6 +1846,53 @@ namespace VienShops.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SANPHAM_CHITIETSANPHAM", Storage="_CHITIETSANPHAMs", ThisKey="MASP", OtherKey="MASP")]
+		public EntitySet<CHITIETSANPHAM> CHITIETSANPHAMs
+		{
+			get
+			{
+				return this._CHITIETSANPHAMs;
+			}
+			set
+			{
+				this._CHITIETSANPHAMs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAISANPHAM_SANPHAM", Storage="_LOAISANPHAM", ThisKey="MALOAISP", OtherKey="MALOAISP", IsForeignKey=true)]
+		public LOAISANPHAM LOAISANPHAM
+		{
+			get
+			{
+				return this._LOAISANPHAM.Entity;
+			}
+			set
+			{
+				LOAISANPHAM previousValue = this._LOAISANPHAM.Entity;
+				if (((previousValue != value) 
+							|| (this._LOAISANPHAM.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LOAISANPHAM.Entity = null;
+						previousValue.SANPHAMs.Remove(this);
+					}
+					this._LOAISANPHAM.Entity = value;
+					if ((value != null))
+					{
+						value.SANPHAMs.Add(this);
+						this._MALOAISP = value.MALOAISP;
+					}
+					else
+					{
+						this._MALOAISP = default(string);
+					}
+					this.SendPropertyChanged("LOAISANPHAM");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1785,6 +1911,18 @@ namespace VienShops.Models
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_CHITIETSANPHAMs(CHITIETSANPHAM entity)
+		{
+			this.SendPropertyChanging();
+			entity.SANPHAM = this;
+		}
+		
+		private void detach_CHITIETSANPHAMs(CHITIETSANPHAM entity)
+		{
+			this.SendPropertyChanging();
+			entity.SANPHAM = null;
 		}
 	}
 }

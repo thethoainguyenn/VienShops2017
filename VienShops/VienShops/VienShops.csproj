@@ -431,6 +431,8 @@
     <Content Include="Views\Home\ShowProductListTheme2.cshtml" />
     <Content Include="Views\Cart\Cart.cshtml" />
     <Content Include="Views\Cart\CartLayoutHeader.cshtml" />
+    <Content Include="Views\Home\SIZE.cshtml" />
+    <Content Include="Views\Home\extendProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

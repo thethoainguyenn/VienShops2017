@@ -1,5 +1,5 @@
 ﻿@using VienShops.Models
-@model SANPHAM
+@model SANPHAM 
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,33 +12,33 @@
                 <div class="products-details">
                     <div class="preview_image">
                         <div class="preview-small">
-                            <img id="zoom_03" src="~/images/products/medium/AoHoa3.png" data-zoom-image="~/images/products/Large/products-01.jpg" alt="">
+                            <img id="zoom_03" src="~/images/products/medium/@Model.URL" data-zoom-image="~/images/products/Large/products-01.jpg" alt="">
                         </div>
                         <div class="thum-image">
                             <ul id="gallery_01" class="prev-thum">
                                 <li>
-                                    <a href="#" data-image="~/images/products/medium/AoHoa3.png" data-zoom-image="~/images/products/Large/products-01.jpg">
-                                        <img src="~/images/products/thum/products-01.png" alt="">
+                                    <a href="#" data-image="~/images/products/medium/@Model.URL" data-zoom-image="~/images/products/Large/@Model.URL">
+                                        <img src="~/images/products/thum/@Model.URL" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-image="~/images/products/medium/AoHoa3.png" data-zoom-image="~/images/products/Large/products-02.jpg">
-                                        <img src="~/images/products/thum/products-02.png" alt="">
+                                    <a href="#" data-image="~/images/products/medium/@Model.URL" data-zoom-image="~/images/products/Large/@Model.URL">
+                                        <img src="~/images/products/thum/@Model.URL" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-image="~/images/products/medium/products-03.jpg" data-zoom-image="~/images/products/Large/products-03.jpg">
-                                        <img src="~/images/products/thum/products-03.png" alt="">
+                                    <a href="#" data-image="~/images/products/medium/@Model.URL" data-zoom-image="~/images/products/Large/@Model.URL">
+                                        <img src="~/images/products/thum/@Model.URL" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-image="~/images/products/medium/products-04.jpg" data-zoom-image="~/images/products/Large/products-04.jpg">
-                                        <img src="~/images/products/thum/products-04.png" alt="">
+                                    <a href="#" data-image="~/images/products/medium/@Model.URL" data-zoom-image="~/images/products/Large/@Model.URL">
+                                        <img src="~/images/products/thum/@Model.URL" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" data-image="~/images/products/medium/products-05.jpg" data-zoom-image="~/images/products/Large/products-05.jpg">
-                                        <img src="~/images/products/thum/products-05.png" alt="">
+                                    <a href="#" data-image="~/images/products/medium/@Model.URL" data-zoom-image="~/images/products/Large/@Model.URL">
+                                        <img src="~/images/products/thum/@Model.URL" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -80,27 +80,21 @@
                                     VND
                                 </sup>
                             </span>
-                            @*<span class="old_price">
-                                    450.00
-                                    <sup>
-                                        VND
-                                    </sup>
-                                </span>*@
+
                         </div>
                         <hr class="border">
                         <div class="wided">
                             <div class="qty">
-                                Qty &nbsp;&nbsp;:
-                                <select>
-                                    <option>
-                                        1
-                                    </option>
-                                </select>
+								Size:
+								<select>
+									@Html.Action("SIZE", "Home", new { @id = Model.MASP })
+								</select>
                             </div>
                             <div class="button_group">
-                                <button class="button">
-                                    Thêm vào giỏ hàng
-                                </button>
+                                  @using (Html.BeginForm("AddCart", "Cart", new { @sMaSP = @Model.MASP, @sUrl = Request.Url.ToString() }))
+								{
+									<button class="button add-cart" type="submit">Thêm vào giỏ hàng</button>
+								}
                                 <button class="button compare">
                                     <i class="fa fa-exchange">
                                     </i>
@@ -145,12 +139,7 @@
                     </div>
                     <div class="tab-content-wrap">
                         <div class="tab-content" id="Descraption">
-                            <p>
-                                Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae Aenean eleifend laoreet congue. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibu um ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae Aenean eleifend laoreet congue. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae Aenean eleifend laoreet congue. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae...
-                            </p>
-                            <p>
-                                Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae Aenean eleifend laoreet congue. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibu um ante ipsum primis in faucibus orci luctus et ultri ces posuere cubilia curae Aenean eleifend laoreet congue. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc...
-                            </p>
+							<p>@Model.MOTA</p>
                         </div>
                         <div class="tab-content" id="Reviews">
                             <form>
@@ -365,90 +354,7 @@
                     <ul id="hot">
                         <li>
                             <div class="row">
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="products">
-                                        <div class="offer">
-                                            - %20
-                                        </div>
-                                        <div class="thumbnail">
-                                            <img src="~/images/products/small/products-01.png" alt="Product Name">
-                                        </div>
-                                        <div class="productname">
-                                            Iphone 5s Gold 32 Gb 2013
-                                        </div>
-                                        <h4 class="price">
-                                            $451.00
-                                        </h4>
-                                        <div class="button_group">
-                                            <button class="button add-cart" type="button">
-                                                Add To Cart
-                                            </button>
-                                            <button class="button compare" type="button">
-                                                <i class="fa fa-exchange">
-                                                </i>
-                                            </button>
-                                            <button class="button wishlist" type="button">
-                                                <i class="fa fa-heart-o">
-                                                </i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="products">
-                                        <div class="thumbnail">
-                                            <img src="~/images/products/small/products-02.png" alt="Product Name">
-                                        </div>
-                                        <div class="productname">
-                                            Iphone 5s Gold 32 Gb 2013
-                                        </div>
-                                        <h4 class="price">
-                                            $451.00
-                                        </h4>
-                                        <div class="button_group">
-                                            <button class="button add-cart" type="button">
-                                                Add To Cart
-                                            </button>
-                                            <button class="button compare" type="button">
-                                                <i class="fa fa-exchange">
-                                                </i>
-                                            </button>
-                                            <button class="button wishlist" type="button">
-                                                <i class="fa fa-heart-o">
-                                                </i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <div class="products">
-                                        <div class="offer">
-                                            New
-                                        </div>
-                                        <div class="thumbnail">
-                                            <img src="~/images/products/small/products-03.png" alt="Product Name">
-                                        </div>
-                                        <div class="productname">
-                                            Iphone 5s Gold 32 Gb 2013
-                                        </div>
-                                        <h4 class="price">
-                                            $451.00
-                                        </h4>
-                                        <div class="button_group">
-                                            <button class="button add-cart" type="button">
-                                                Add To Cart
-                                            </button>
-                                            <button class="button compare" type="button">
-                                                <i class="fa fa-exchange">
-                                                </i>
-                                            </button>
-                                            <button class="button wishlist" type="button">
-                                                <i class="fa fa-heart-o">
-                                                </i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                               @Html.Action("extendProduct", "Home", new { @maloai = Model.MALOAISP, @masp = Model.MASP })
                             </div>
                         </li>
                     </ul>

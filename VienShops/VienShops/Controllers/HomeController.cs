@@ -80,14 +80,30 @@ namespace VienShops.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-            // Truyền vào model là sản phẩm
-            return View(sp);
+			// Truyền vào model là sản phẩm
+			return View(sp);
         }
-        // Sản phẩm theo loại - Sản phẩm liên quan khi xem trang chi tiết - Sản phẩm theo loại
-        //public ActionResult ProductType(string MaLoaiSP = 0)
-        //{
-        //   LOAISANPHAM sp = Db.LOAISANPHAMs.SingleOrDefault(n=>n.MALOAISP == MaLoaiSP)
-        //}
-        // -> Đang làm
-    }
+		// Sản phẩm theo loại - Sản phẩm liên quan khi xem trang chi tiết - Sản phẩm theo loại
+		//public ActionResult ProductType(string MaLoaiSP = 0)
+		//{
+		//   LOAISANPHAM sp = Db.LOAISANPHAMs.SingleOrDefault(n=>n.MALOAISP == MaLoaiSP)
+		//}
+		// -> Đang làm
+		public ActionResult SIZE(string id)
+		{
+			var ct = Db.CHITIETSANPHAMs.Where(n => n.MASP == id).ToList();
+			if (ct == null)
+			{
+				Response.StatusCode = 404;
+				return null;
+			}
+			// Truyền vào model là sản phẩm
+			return PartialView(ct);
+		}
+		public ActionResult extendProduct(string maloai,string masp)
+		{
+			var exProduct = Db.SANPHAMs.OrderBy(n => n.MALOAISP).Where(n=>n.MALOAISP==maloai  ).Where(n=>n.MASP!=masp).Take(3).ToList();
+			return PartialView(exProduct);
+		}
+	}
 }
