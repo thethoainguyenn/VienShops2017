@@ -200,6 +200,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -433,6 +434,7 @@
     <Content Include="Views\Cart\CartLayoutHeader.cshtml" />
     <Content Include="Views\Home\SIZE.cshtml" />
     <Content Include="Views\Home\extendProduct.cshtml" />
+    <Content Include="Views\Search\SearchResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
