@@ -41,7 +41,7 @@ namespace VienShops.Controllers
             return PartialView(products);
         }
         // Show products list
-        public ActionResult ShowProductList(int? page, string id)
+        public ActionResult ShowProductList(int? page, int id)
         {
             int pageSize = 9;
             // Nếu trang bé hơn 9 trả về 1 trang
@@ -53,7 +53,7 @@ namespace VienShops.Controllers
             return View(productList);
         }
         // Show products list giao diện 2
-        public ActionResult ShowProductListTheme2(int? page,string id)
+        public ActionResult ShowProductListTheme2(int? page,int id)
         {
             int pageSize = 5;
             int pageNumber = (page ?? 1);
@@ -72,7 +72,7 @@ namespace VienShops.Controllers
             return View();
         }
         // Chi tiết sản phẩm 
-        public ActionResult Detail(string id)
+        public ActionResult Detail(int id)
         {
             SANPHAM sp = Db.SANPHAMs.SingleOrDefault(n => n.MASP == id);
             if(sp == null)
@@ -89,7 +89,7 @@ namespace VienShops.Controllers
 		//   LOAISANPHAM sp = Db.LOAISANPHAMs.SingleOrDefault(n=>n.MALOAISP == MaLoaiSP)
 		//}
 		// -> Đang làm
-		public ActionResult SIZE(string id)
+		public ActionResult SIZE(int id)
 		{
 			var ct = Db.CHITIETSANPHAMs.Where(n => n.MASP == id).ToList();
 			if (ct == null)
@@ -100,7 +100,7 @@ namespace VienShops.Controllers
 			// Truyền vào model là sản phẩm
 			return PartialView(ct);
 		}
-		public ActionResult extendProduct(string maloai,string masp)
+		public ActionResult extendProduct(int maloai,int masp)
 		{
 			var exProduct = Db.SANPHAMs.OrderBy(n => n.MALOAISP).Where(n=>n.MALOAISP==maloai  ).Where(n=>n.MASP!=masp).Take(3).ToList();
 			return PartialView(exProduct);

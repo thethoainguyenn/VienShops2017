@@ -8,7 +8,7 @@ namespace VienShops.Models
     public class Cart
     {
         DBVienShopsDataContext Db = new DBVienShopsDataContext();
-        public string sMaSP { get; set; }
+        public int sMaSP { get; set; }
         public string sTenSP { get; set; }
         public string sUrlHinh { get; set; }
         public double dDonGia { get; set; }
@@ -18,7 +18,7 @@ namespace VienShops.Models
             get { return iSoLuong * dDonGia; }
         }
         // Create funtion 
-        public Cart(string MaSP)
+        public Cart(int MaSP)
         {
             sMaSP = MaSP;
             SANPHAM sanpham = Db.SANPHAMs.Single(n => n.MASP == sMaSP);

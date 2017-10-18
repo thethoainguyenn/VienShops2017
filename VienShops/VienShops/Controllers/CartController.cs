@@ -24,7 +24,7 @@ namespace VienShops.Controllers
         }
 
         // Add cart
-        public ActionResult AddCart(string sMaSP, string sUrl)
+        public ActionResult AddCart(int sMaSP, string sUrl)
         {
             SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sMaSP);
             if (sanpham == null)
@@ -50,7 +50,7 @@ namespace VienShops.Controllers
             }
         }
         // Update cart
-        public ActionResult UpdateCart(string sMaSP, FormCollection f)
+        public ActionResult UpdateCart(int sMaSP, FormCollection f)
         {
             // Kiểm tra Mã SP
             SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sMaSP);
@@ -69,7 +69,7 @@ namespace VienShops.Controllers
             return RedirectToAction("Cart");
         }
         // Delete Cart
-        public ActionResult DeleteCart(string sMaSP)
+        public ActionResult DeleteCart(int sMaSP)
         {
             // Kiểm tra Mã SP
             SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sMaSP);
