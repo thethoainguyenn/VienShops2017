@@ -32,15 +32,11 @@
                 <div class="products-grid">
                     <div class="toolbar">
                         <div class="sorter">
-                            @*<div class="view-mode">
-                                <a href="@Url.Action("ShowProductListTheme2","Home",new {@id = @ViewBag.ID })" class="list">
-                                    <a href="productlitst.html" class="list">
-                                    List
-                                </a>
-                                <a href="#" class="grid active">
-                                    Grid
-                                </a>
-                            </div>*@
+                            <div class="view-mode">
+                                <div>
+                                    @ViewBag.Notification
+                                </div>
+                            </div>
                             @*<div class="sort-by">
                                     Sort by :
                                     <select name="">
@@ -71,7 +67,7 @@
                                 </div>*@
                         </div>
                         <div class="pager">
-                            @Html.PagedListPager(Model, page => Url.Action("SearchResults", new { page = page }))
+                            @Html.PagedListPager(Model, page => Url.Action("SearchResults", new { page = page, @sKeyWord = ViewBag.KeyWord }))
                         </div>
                     </div>
                     <div class="clearfix">
@@ -111,7 +107,7 @@
                     </div>
                     <div class="toolbar">
                         <div class="sorter bottom">
-                            
+
                         </div>
                         <div class="pager">
                             @Html.PagedListPager(Model, page => Url.Action("SearchResults", new { page = page }))
