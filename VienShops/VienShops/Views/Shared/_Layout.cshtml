@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -55,11 +56,31 @@
 									</ul>
 								</div>
 								<div class="col-md-3">
-									<ul class="usermenu">
-										<li><a href="@Url.Action("Login","Account")" class="log">Đăng nhập</a></li>
-										<li><a href="@Url.Action("Register","Account")" class="reg">Đăng ký</a></li>
-									</ul>
-								</div>
+									
+                                        @*@if (Request.IsAuthenticated)
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <ul class="usermenu">
+                                               @using(Html.BeginForm("LogOff", "Acount",FormMethod.Post,new { id ="logoutForm",@class = "navbar-right" }))
+                                                {
+
+                                                <li>@Html.ActionLink("Xin Chào" + User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
+
+                                                }
+                                                <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
+                                            </ul>
+                                        }
+                                        else
+                                        {
+                                            <ul class="usermenu">
+                                                <li><a href="@Url.Action("Login","Account")" class="log">Đăng nhập</a></li>
+                                                <li><a href="@Url.Action("Register","Account")" class="reg">Đăng ký</a></li>
+
+                                            </ul>
+                                        }*@
+                                    @Html.Partial("_LoginPartial")
+
+</div>
 							</div>
 						</div>
 						<div class="clearfix"></div>
