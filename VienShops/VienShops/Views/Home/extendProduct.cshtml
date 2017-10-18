@@ -13,12 +13,13 @@
 			@item.TENSP
 		</div>
 		<h4 class="price">
-			@item.GIA
+			@item.GIA VND
 		</h4>
 		<div class="button_group">
-			<button class="button add-cart" type="button">
-				Add To Cart
-			</button>
+			@using (Html.BeginForm("AddCart", "Cart", new { @sMaSP = @item.MASP, @sUrl = Request.Url.ToString() }))
+			{
+				<button class="button add-cart" type="submit">Thêm vào giỏ hàng</button>
+			}
 			<button class="button compare" type="button">
 				<i class="fa fa-exchange">
 				</i>
