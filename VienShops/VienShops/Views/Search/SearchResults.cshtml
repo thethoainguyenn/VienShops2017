@@ -110,7 +110,7 @@
 
                         </div>
                         <div class="pager">
-                            @Html.PagedListPager(Model, page => Url.Action("SearchResults", new { page = page }))
+							@Html.PagedListPager(Model, page => Url.Action("SearchResults", new { page = page, @sKeyWord = ViewBag.KeyWord }))
                         </div>
                     </div>
                     <div class="clearfix">

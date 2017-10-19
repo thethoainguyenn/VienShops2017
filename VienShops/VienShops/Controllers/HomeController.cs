@@ -32,7 +32,7 @@ namespace VienShops.Controllers
         }
         public ActionResult FeaturedProduct()
         {
-            var featuredProduct = Db.SANPHAMs.OrderBy(n => n.GIA).Take(4).ToList();
+            var featuredProduct = Db.SANPHAMs.OrderBy(n => n.CHATLIEU).Take(4).ToList();
             return PartialView(featuredProduct);
         }
         public ActionResult Products()

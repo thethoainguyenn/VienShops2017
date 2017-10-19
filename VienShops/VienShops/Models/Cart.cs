@@ -13,6 +13,7 @@ namespace VienShops.Models
         public string sUrlHinh { get; set; }
         public double dDonGia { get; set; }
         public int iSoLuong { get; set; }
+		public string cChatLieu { get; set; }
         public double dThanhTien
         {
             get { return iSoLuong * dDonGia; }
@@ -26,6 +27,7 @@ namespace VienShops.Models
             sUrlHinh = sanpham.URL;
             dDonGia = double.Parse(sanpham.GIA.ToString());
             iSoLuong = 1;
-        }
+			cChatLieu = sanpham.CHATLIEU;
+		}
     }
 }
