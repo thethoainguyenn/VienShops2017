@@ -26,7 +26,7 @@ namespace VienShops.Models
             sTenSP = sanpham.TENSP;
             sUrlHinh = sanpham.URL;
             dDonGia = double.Parse(sanpham.GIA.ToString());
-            iSoLuong = 1;
+            iSoLuong =1 ;
 			cChatLieu = sanpham.CHATLIEU;
 		}
     }
