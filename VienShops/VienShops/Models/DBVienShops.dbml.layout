@@ -1,192 +1,199 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.75, 15.25" name="DBVienShops">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 19.25" name="DBVienShops">
   <DataContextMoniker Name="/DBVienShopsDataContext" />
   <nestedChildShapes>
-    <classShape Id="765ca16f-78ad-4b58-a925-f067d1c5bcc3" absoluteBounds="0.75, 12, 2, 1.5785953776041666">
+    <classShape Id="029ee6e8-42a7-4766-a801-3a73027a230b" absoluteBounds="8.75, 1, 2, 1.5785953776041664">
       <DataClassMoniker Name="/DBVienShopsDataContext/__MigrationHistory" />
       <nestedChildShapes>
-        <elementListCompartment Id="f8977120-8300-4705-a0c2-0e0ec5b60d76" absoluteBounds="0.765, 12.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c0c01618-2d01-46d2-b0d0-a92ed790d7c8" absoluteBounds="8.765, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="baea117d-0b86-41f8-846d-77de936cd961" absoluteBounds="6.25, 1.75, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/DBVienShopsDataContext/SANPHAMKHUYENMAI" />
-      <nestedChildShapes>
-        <elementListCompartment Id="1f6ec1bc-92cc-4c9b-976d-6b65cb985557" absoluteBounds="6.265, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="33a01507-f24c-4de1-847c-1f7f73cf323c" absoluteBounds="9.75, 2.5, 2, 1.1939925130208335">
+    <classShape Id="a2ea495c-7db8-4514-b7a0-b82d8dc3ab72" absoluteBounds="3.75, 17.75, 2, 1.1939925130208309">
       <DataClassMoniker Name="/DBVienShopsDataContext/AspNetRole" />
       <nestedChildShapes>
-        <elementListCompartment Id="4afdcd58-685d-45cc-9f23-b8e308af329a" absoluteBounds="9.765, 2.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="cf13d567-bf40-49c4-ac97-a22f440c489f" absoluteBounds="3.765, 18.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ba30f2d3-5c82-4390-a8c2-679ce0ccb1bb" absoluteBounds="12.5, 13.375, 2, 1.5785953776041666">
+    <classShape Id="2f431bfa-4b42-4344-bffb-f59edc3c14b6" absoluteBounds="3.5, 14.5, 2, 1.5785953776041666">
       <DataClassMoniker Name="/DBVienShopsDataContext/AspNetUserClaim" />
       <nestedChildShapes>
-        <elementListCompartment Id="04afd222-c6fe-4615-9cbb-4057cd47f02c" absoluteBounds="12.515, 13.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="02055d35-396a-497d-a125-5e9e26b38056" absoluteBounds="3.515, 14.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e18a79b4-249e-435c-98f4-e823c3029721" absoluteBounds="12.5, 11.25, 2, 1.3862939453124987">
+    <classShape Id="92812f10-5a91-4c8b-80d4-0bdefe68a10a" absoluteBounds="3.5, 12.375, 2, 1.3862939453124987">
       <DataClassMoniker Name="/DBVienShopsDataContext/AspNetUserLogin" />
       <nestedChildShapes>
-        <elementListCompartment Id="aad0dbfd-9768-4b97-a566-9a89380734d7" absoluteBounds="12.515, 11.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fc4f8a5a-9c1c-4cc1-b245-406b271caee0" absoluteBounds="3.515, 12.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="938df251-7bc5-408b-b09f-43b98f35038d" absoluteBounds="12.5, 8.5, 2, 1.1939925130208344">
+    <classShape Id="26c04df0-fe02-469f-a502-c29d04a351e0" absoluteBounds="6.5, 12.75, 2, 1.1939925130208344">
       <DataClassMoniker Name="/DBVienShopsDataContext/AspNetUserRole" />
       <nestedChildShapes>
-        <elementListCompartment Id="daa60624-69a9-4b74-a9be-05e2a07e6e58" absoluteBounds="12.515, 8.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7ace32ce-4982-4a7a-9f7e-e92e16a504c1" absoluteBounds="6.515, 13.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="bed9b32d-b092-4ff4-8b7e-f5529eedb5b6" absoluteBounds="9.75, 9.375, 2, 3.5016097005208344">
+    <classShape Id="ca8bb028-7a47-4503-95b8-7b103f38286c" absoluteBounds="0.75, 8.5, 2, 3.5016097005208309">
       <DataClassMoniker Name="/DBVienShopsDataContext/AspNetUser" />
       <nestedChildShapes>
-        <elementListCompartment Id="274915d5-5e06-4081-a1f8-1888fee5a421" absoluteBounds="9.765, 9.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1e7c8fd0-0667-4769-996d-7e9af917a860" absoluteBounds="0.765, 8.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="b7e71fb4-d9bd-4f8b-a63a-7f9940b636f5" absoluteBounds="9.25, 4.75, 2, 1.5785953776041666">
+    <classShape Id="36dfc205-5d41-4bdd-b9dd-3c727ccc6c0c" absoluteBounds="6.25, 1.875, 2, 1.5785953776041664">
       <DataClassMoniker Name="/DBVienShopsDataContext/CHITIETDONHANG" />
       <nestedChildShapes>
-        <elementListCompartment Id="52566156-d240-451f-9f36-47a74f86f474" absoluteBounds="9.265, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="86d2e577-176d-40a8-b906-c664ed2c94bc" absoluteBounds="6.265, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e7c12520-53a8-4191-95ed-13e38585c69f" absoluteBounds="6.25, 4.875, 2, 1.3862939453125005">
+    <classShape Id="48c2445c-4645-4e19-ad5c-8806854d6ff4" absoluteBounds="6.25, 5, 2, 1.3862939453125005">
       <DataClassMoniker Name="/DBVienShopsDataContext/CHITIETPHIEUNHAP" />
       <nestedChildShapes>
-        <elementListCompartment Id="c559d305-030a-4301-9033-c2c150486481" absoluteBounds="6.265, 5.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="56eafe5c-2897-468b-9ce4-4e5be8dd135b" absoluteBounds="6.265, 5.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e2661f8a-5fb7-4b2d-bb97-aa1ce059b9cf" absoluteBounds="6.25, 7, 2, 1.3862939453124996">
+    <classShape Id="5594728e-afd0-4ee2-9f56-e0df1e4f8b3a" absoluteBounds="6.25, 7.125, 2, 1.3862939453125005">
       <DataClassMoniker Name="/DBVienShopsDataContext/CHITIETSANPHAM" />
       <nestedChildShapes>
-        <elementListCompartment Id="d930349f-94d5-44be-a05c-508c48758690" absoluteBounds="6.265, 7.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8f468f80-f20b-4f59-8a73-434b577cb8d9" absoluteBounds="6.265, 7.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c8c28516-f1ec-4ec7-be0c-cba8e49d9149" absoluteBounds="6.5, 9.5, 2, 1.9631982421874987">
+    <classShape Id="f7a8b124-8e6c-493a-9f35-399354a9fe3b" absoluteBounds="3.5, 9.25, 2, 2.1554996744791666">
       <DataClassMoniker Name="/DBVienShopsDataContext/DONHANG" />
       <nestedChildShapes>
-        <elementListCompartment Id="51075bea-f6b3-4eaa-87b6-557271a2335b" absoluteBounds="6.515, 9.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6395ecb9-951e-402c-b23b-f94b9a9fbbe2" absoluteBounds="3.515, 9.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3929c62a-37ee-45f1-b762-1e39154f88f1" absoluteBounds="3.5, 0.75, 2, 1.5785953776041666">
+    <classShape Id="42cf71ae-a8a9-4c09-b17c-3523ccc8e5bf" absoluteBounds="6.5, 9.875, 2, 1.5785953776041666">
       <DataClassMoniker Name="/DBVienShopsDataContext/KHUYENMAI" />
       <nestedChildShapes>
-        <elementListCompartment Id="da776736-68e6-4244-a3b0-af6316473741" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2ba22b29-e07b-44a3-9b43-36e44e9b5f33" absoluteBounds="6.515, 10.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a9f4c21e-3f4b-44d8-8e24-d2b762cc26fe" absoluteBounds="0.75, 4.875, 2, 1.3862939453125005">
-      <DataClassMoniker Name="/DBVienShopsDataContext/LOAISANPHAM" />
-      <nestedChildShapes>
-        <elementListCompartment Id="5757268e-626e-4e31-a910-69b22423c653" absoluteBounds="0.765, 5.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="e8518360-c54a-4c7f-9572-7654a1a7c405" absoluteBounds="0.75, 8.75, 2, 1.5785953776041666">
+    <classShape Id="a66b4ebb-1129-4069-88b0-b9f7f206b214" absoluteBounds="0.75, 2, 2, 1.5785953776041664">
       <DataClassMoniker Name="/DBVienShopsDataContext/NHACUNGCAP" />
       <nestedChildShapes>
-        <elementListCompartment Id="59ebfc67-d4ce-4648-bf8a-d93788a12b13" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0142495b-d0ec-40b4-8f0b-7d99d7d39a5b" absoluteBounds="0.765, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="032acb96-b4a8-40d2-a05b-7e65f6933516" absoluteBounds="3.5, 8.625, 2, 1.7708968098958344">
+    <classShape Id="34994618-74a7-4ebf-a218-5625668f9bc3" absoluteBounds="0.75, 5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DBVienShopsDataContext/LOAISANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77b1b009-1676-49b6-8f08-b6aa78993cda" absoluteBounds="0.765, 5.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e28fa73f-7ec2-4cb1-853a-23a308e670dd" absoluteBounds="3.5, 0.75, 2, 1.7708968098958327">
       <DataClassMoniker Name="/DBVienShopsDataContext/PHIEUNHAPHANG" />
       <nestedChildShapes>
-        <elementListCompartment Id="d4c980dd-c4ae-4944-9c72-33edba53364f" absoluteBounds="3.515, 9.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f8f0a57d-44ba-468c-8546-5bfb5df59efd" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="35bf9327-5533-4b1a-904c-329e1c604e33" absoluteBounds="3.5, 4.125, 2, 2.9247054036458326">
+    <classShape Id="001a2fa2-abaf-4515-a277-fcf28df763fd" absoluteBounds="3.5, 4.125, 2, 2.9247054036458326">
       <DataClassMoniker Name="/DBVienShopsDataContext/SANPHAM" />
       <nestedChildShapes>
-        <elementListCompartment Id="6b0a555e-d266-4cd7-9590-92ba5f08a40e" absoluteBounds="3.515, 4.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a7ae131b-55cf-42c2-8672-480a565519aa" absoluteBounds="3.515, 4.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(11.75 : 3.09699625651042); (13.5 : 3.09699625651042); (13.5 : 8.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <classShape Id="2e732bfe-fa3d-4322-b541-99ba694a7b19" absoluteBounds="9.25, 4.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBVienShopsDataContext/SANPHAMKHUYENMAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6d79f4f-00b6-42f2-b1c1-f8bc1503dc39" absoluteBounds="9.265, 5.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.65625 : 17.75); (5.65625 : 13.8838932291667); (6.5 : 13.8838932291667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/AspNetRole/AspNetRole_AspNetUserRole" />
       <nodes>
-        <classShapeMoniker Id="33a01507-f24c-4de1-847c-1f7f73cf323c" />
-        <classShapeMoniker Id="938df251-7bc5-408b-b09f-43b98f35038d" />
+        <classShapeMoniker Id="a2ea495c-7db8-4514-b7a0-b82d8dc3ab72" />
+        <classShapeMoniker Id="26c04df0-fe02-469f-a502-c29d04a351e0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.75 : 12.8766097005208); (10.75 : 14.1642976888021); (12.5 : 14.1642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 12.0016097005208); (1.75 : 15.2892976888021); (3.5 : 15.2892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/AspNetUser/AspNetUser_AspNetUserClaim" />
       <nodes>
-        <classShapeMoniker Id="bed9b32d-b092-4ff4-8b7e-f5529eedb5b6" />
-        <classShapeMoniker Id="ba30f2d3-5c82-4390-a8c2-679ce0ccb1bb" />
+        <classShapeMoniker Id="ca8bb028-7a47-4503-95b8-7b103f38286c" />
+        <classShapeMoniker Id="2f431bfa-4b42-4344-bffb-f59edc3c14b6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.75 : 11.9431469726562); (12.5 : 11.9431469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.2812525 : 12.0016097005208); (2.2812525 : 13.0681469726562); (3.5 : 13.0681469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/AspNetUser/AspNetUser_AspNetUserLogin" />
       <nodes>
-        <classShapeMoniker Id="bed9b32d-b092-4ff4-8b7e-f5529eedb5b6" />
-        <classShapeMoniker Id="e18a79b4-249e-435c-98f4-e823c3029721" />
+        <classShapeMoniker Id="ca8bb028-7a47-4503-95b8-7b103f38286c" />
+        <classShapeMoniker Id="92812f10-5a91-4c8b-80d4-0bdefe68a10a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.75 : 9.375); (10.75 : 8.9374995); (12.5 : 8.9374995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.2187475 : 12.0016097005208); (1.2187475 : 13.8538435872396); (1.66666666666667 : 13.8538435872396 : JumpStart); (1.83333333333333 : 13.8538435872396 : JumpEnd); (6.5 : 13.8538435872396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/AspNetUser/AspNetUser_AspNetUserRole" />
       <nodes>
-        <classShapeMoniker Id="bed9b32d-b092-4ff4-8b7e-f5529eedb5b6" />
-        <classShapeMoniker Id="938df251-7bc5-408b-b09f-43b98f35038d" />
+        <classShapeMoniker Id="ca8bb028-7a47-4503-95b8-7b103f38286c" />
+        <classShapeMoniker Id="26c04df0-fe02-469f-a502-c29d04a351e0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.40625 : 9.5); (8.40625 : 4.78125); (9.25 : 4.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 9.25); (5.875 : 8.875); (5.875 : 2.66429768880208); (6.25 : 2.66429768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/DONHANG/DONHANG_CHITIETDONHANG" />
       <nodes>
-        <classShapeMoniker Id="c8c28516-f1ec-4ec7-be0c-cba8e49d9149" />
-        <classShapeMoniker Id="b7e71fb4-d9bd-4f8b-a63a-7f9940b636f5" />
+        <classShapeMoniker Id="f7a8b124-8e6c-493a-9f35-399354a9fe3b" />
+        <classShapeMoniker Id="36dfc205-5d41-4bdd-b9dd-3c727ccc6c0c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 2.03929768880208); (6.25 : 2.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DBVienShopsDataContext/KHUYENMAI/KHUYENMAI_SANPHAMKHUYENMAI" />
+    <associationConnector edgePoints="[(2.75 : 10.3277498372396); (3.5 : 10.3277498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBVienShopsDataContext/AspNetUser/AspNetUser_DONHANG" />
       <nodes>
-        <classShapeMoniker Id="3929c62a-37ee-45f1-b762-1e39154f88f1" />
-        <classShapeMoniker Id="baea117d-0b86-41f8-846d-77de936cd961" />
+        <classShapeMoniker Id="ca8bb028-7a47-4503-95b8-7b103f38286c" />
+        <classShapeMoniker Id="f7a8b124-8e6c-493a-9f35-399354a9fe3b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 8.62636122831531); (5.875 : 8.25136122831531); (5.875 : 5.56814697265625); (6.25 : 5.56814697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 2.45959553570713); (5.81607443490112 : 2.77566997060825 : JumpStart); (5.93392556509888 : 2.89352110080601 : JumpEnd); (6.0625 : 3.02209553570713); (6.0625 : 5.69314697265625); (6.25 : 5.69314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/PHIEUNHAPHANG/PHIEUNHAPHANG_CHITIETPHIEUNHAP" />
       <nodes>
-        <classShapeMoniker Id="032acb96-b4a8-40d2-a05b-7e65f6933516" />
-        <classShapeMoniker Id="e7c12520-53a8-4191-95ed-13e38585c69f" />
+        <classShapeMoniker Id="e28fa73f-7ec2-4cb1-853a-23a308e670dd" />
+        <classShapeMoniker Id="48c2445c-4645-4e19-ad5c-8806854d6ff4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 9.53929768880208); (3.5 : 9.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.26044840494792); (3.5 : 2.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/NHACUNGCAP/NHACUNGCAP_PHIEUNHAPHANG" />
       <nodes>
-        <classShapeMoniker Id="e8518360-c54a-4c7f-9572-7654a1a7c405" />
-        <classShapeMoniker Id="032acb96-b4a8-40d2-a05b-7e65f6933516" />
+        <classShapeMoniker Id="a66b4ebb-1129-4069-88b0-b9f7f206b214" />
+        <classShapeMoniker Id="e28fa73f-7ec2-4cb1-853a-23a308e670dd" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.125); (5.875 : 3.75); (5.875 : 2.71519853320312); (6.25 : 2.71519853320312)]" fixedFrom="NotFixed" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DBVienShopsDataContext/SANPHAM/SANPHAM_SANPHAMKHUYENMAI" />
-      <nodes>
-        <classShapeMoniker Id="35bf9327-5533-4b1a-904c-329e1c604e33" />
-        <classShapeMoniker Id="baea117d-0b86-41f8-846d-77de936cd961" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.63304818880208); (5.79166666666667 : 6.63304818880208 : JumpStart); (5.95833333333333 : 6.63304818880208 : JumpEnd); (8.32291666666667 : 6.63304818880208 : JumpStart); (8.48958333333333 : 6.63304818880208 : JumpEnd); (10.25 : 6.63304818880208); (10.25 : 6.32859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 4.18653746153846); (5.81607443490112 : 3.87046302663734 : JumpStart); (5.93392556509888 : 3.75261189643958 : JumpEnd); (5.9375 : 3.74903746153846); (5.9375 : 3.09019853320312); (6.25 : 3.09019853320312)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/SANPHAM/SANPHAM_CHITIETDONHANG" />
       <nodes>
-        <classShapeMoniker Id="35bf9327-5533-4b1a-904c-329e1c604e33" />
-        <classShapeMoniker Id="b7e71fb4-d9bd-4f8b-a63a-7f9940b636f5" />
+        <classShapeMoniker Id="001a2fa2-abaf-4515-a277-fcf28df763fd" />
+        <classShapeMoniker Id="36dfc205-5d41-4bdd-b9dd-3c727ccc6c0c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 5.15907348632813); (6.25 : 5.15907348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 5.28407348632813); (5.79166666666667 : 5.28407348632812 : JumpStart); (5.95833333333333 : 5.28407348632813 : JumpEnd); (5.97916666666667 : 5.28407348632812 : JumpStart); (6.14583333333333 : 5.28407348632813 : JumpEnd); (6.25 : 5.28407348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/SANPHAM/SANPHAM_CHITIETPHIEUNHAP" />
       <nodes>
-        <classShapeMoniker Id="35bf9327-5533-4b1a-904c-329e1c604e33" />
-        <classShapeMoniker Id="e7c12520-53a8-4191-95ed-13e38585c69f" />
+        <classShapeMoniker Id="001a2fa2-abaf-4515-a277-fcf28df763fd" />
+        <classShapeMoniker Id="48c2445c-4645-4e19-ad5c-8806854d6ff4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 7.04970540364583); (4.5 : 7.71800017447917); (5.79166666666667 : 7.71800017447916 : JumpStart); (5.95833333333333 : 7.71800017447917 : JumpEnd); (6.25 : 7.71800017447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.5 : 7.04970540364583); (4.5 : 7.81814697265625); (5.79166666666667 : 7.81814697265625 : JumpStart); (5.95833333333333 : 7.81814697265625 : JumpEnd); (6.25 : 7.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/SANPHAM/SANPHAM_CHITIETSANPHAM" />
       <nodes>
-        <classShapeMoniker Id="35bf9327-5533-4b1a-904c-329e1c604e33" />
-        <classShapeMoniker Id="e2661f8a-5fb7-4b2d-bb97-aa1ce059b9cf" />
+        <classShapeMoniker Id="001a2fa2-abaf-4515-a277-fcf28df763fd" />
+        <classShapeMoniker Id="5594728e-afd0-4ee2-9f56-e0df1e4f8b3a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 5.56814697265625); (3.5 : 5.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 5.69314697265625); (3.5 : 5.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBVienShopsDataContext/LOAISANPHAM/LOAISANPHAM_SANPHAM" />
       <nodes>
-        <classShapeMoniker Id="a9f4c21e-3f4b-44d8-8e24-d2b762cc26fe" />
-        <classShapeMoniker Id="35bf9327-5533-4b1a-904c-329e1c604e33" />
+        <classShapeMoniker Id="34994618-74a7-4ebf-a218-5625668f9bc3" />
+        <classShapeMoniker Id="001a2fa2-abaf-4515-a277-fcf28df763fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 9.875); (8.40625 : 4.90625); (9.25 : 4.90625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBVienShopsDataContext/KHUYENMAI/KHUYENMAI_SANPHAMKHUYENMAI" />
+      <nodes>
+        <classShapeMoniker Id="42cf71ae-a8a9-4c09-b17c-3523ccc8e5bf" />
+        <classShapeMoniker Id="2e732bfe-fa3d-4322-b541-99ba694a7b19" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.751650890625); (5.79166666666667 : 6.751650890625 : JumpStart); (5.95833333333333 : 6.751650890625 : JumpEnd); (8.32291666666667 : 6.751650890625 : JumpStart); (8.48958333333333 : 6.751650890625 : JumpEnd); (10.25 : 6.751650890625); (10.25 : 6.45359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBVienShopsDataContext/SANPHAM/SANPHAM_SANPHAMKHUYENMAI" />
+      <nodes>
+        <classShapeMoniker Id="001a2fa2-abaf-4515-a277-fcf28df763fd" />
+        <classShapeMoniker Id="2e732bfe-fa3d-4322-b541-99ba694a7b19" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
