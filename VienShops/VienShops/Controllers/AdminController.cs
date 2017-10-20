@@ -30,20 +30,35 @@ namespace VienShops.Controllers
         }
         // Up load file ảnh
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AddProductNew(SANPHAM sanpham, HttpPostedFileBase fileUpload)
         {
-            // Lưu tên file 
-            var fileName = Path.GetFileName(fileUpload.FileName);
-            // Lưu đường dẫn file
-            var path = Path.Combine(Server.MapPath("~/images/products/large"), fileName);
-            // Kiểm tra hình ảnh đã tồn tại
-            if (System.IO.File.Exists(path))
+           
+            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
+            if(fileUpload == null)
             {
-                ViewBag.Notification = "Hình ảnh đã tồn tại";
+                ViewBag.Notification = "Mời bạn chọn hình ảnh";
+                return View();
             }
-            else
+            // Thêm vào cơ sở dữ liệu
+            if (ModelState.IsValid)
             {
-                fileUpload.SaveAs(path);
+                // Lưu tên file 
+                var fileName = Path.GetFileName(fileUpload.FileName);
+                // Lưu đường dẫn file
+                var path = Path.Combine(Server.MapPath("~/images/products/large"), fileName);
+                // Kiểm tra hình ảnh đã tồn tại
+                if (System.IO.File.Exists(path))
+                {
+                    ViewBag.Notification = "Hình ảnh đã tồn tại";
+                }
+                else
+                {
+                    fileUpload.SaveAs(path);
+                }
+                sanpham.URL = fileUpload.FileName;
+                Db.SANPHAMs.InsertOnSubmit(sanpham);
+                Db.SubmitChanges();
             }
             return View();
         }
