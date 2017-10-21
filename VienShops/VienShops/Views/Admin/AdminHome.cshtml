@@ -75,8 +75,8 @@
             @Html.DisplayFor(modelItem => item.HOT)
         </td>
         <td>
-            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MASP }) |
-            @Html.ActionLink("Xem chi tiết", "Details", new { id=item.MASP }) |
+            @Html.ActionLink("Chỉnh sửa", "EditProduct", new { @MaSP= item.MASP })
+            @Html.ActionLink("Xem chi tiết", "Details", new { id=item.MASP }) 
             @Html.ActionLink("Xóa", "Delete", new { id=item.MASP })
         </td>
     </tr>

@@ -62,5 +62,17 @@ namespace VienShops.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public ActionResult EditProduct(int MaSP)
+        {
+            SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == MaSP);
+            if(sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
+            return View(sanpham);
+        }
     }
 }
