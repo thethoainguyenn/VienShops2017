@@ -67,12 +67,15 @@ namespace VienShops.Controllers
         public ActionResult EditProduct(int MaSP)
         {
             SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == MaSP);
+           // LOAISANPHAM loaisanpham = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == sanpham.MALOAISP);
             if(sanpham == null)
             {
                 Response.StatusCode = 404;
                 return null;
             }
-            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
+            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai",sanpham.MALOAISP);
+
+           // ViewBag.TenLoai = loaisanpham.TENLOAI.ToString();
             return View(sanpham);
         }
 
@@ -113,7 +116,33 @@ namespace VienShops.Controllers
             }
           
 
-            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
+            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai",sanpham.MALOAISP);
+            Db.SubmitChanges();
+            return RedirectToAction("AdminHome","Admin");
+        }
+        // Xóa sản phẩm
+        public ActionResult DeleteProduct(int MaSP)
+        {
+            SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == MaSP);
+            // LOAISANPHAM loaisanpham = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == sanpham.MALOAISP);
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanpham);
+        }
+        // Xác nhận xóa
+        [HttpPost,ActionName("DeleteProduct")]
+        public ActionResult ConfirmDelete(int MaSP)
+        {
+            SANPHAM sanpham = Db.SANPHAMs.SingleOrDefault(n => n.MASP == MaSP);
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            Db.SANPHAMs.DeleteOnSubmit(sanpham);
             Db.SubmitChanges();
             return RedirectToAction("AdminHome","Admin");
         }

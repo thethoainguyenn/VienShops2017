@@ -54,7 +54,8 @@
             @Html.DisplayFor(modelItem => item.GIA)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MOTA)
+            @*@Html.DisplayFor(modelItem => item.MOTA)*@
+            @Html.Raw(item.MOTA)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CHATLIEU)
@@ -77,7 +78,7 @@
         <td>
             @Html.ActionLink("Chỉnh sửa", "EditProduct", new { @MaSP= item.MASP })
             @Html.ActionLink("Xem chi tiết", "Details", new { id=item.MASP }) 
-            @Html.ActionLink("Xóa", "Delete", new { id=item.MASP })
+            @Html.ActionLink("Xóa", "DeleteProduct", new { @MaSP = item.MASP })
         </td>
     </tr>
 }
