@@ -62,6 +62,7 @@ namespace VienShops.Controllers
             }
             return View();
         }
+        // ------------------------------------------------------------------
         [HttpGet]
         public ActionResult EditProduct(int MaSP)
         {
@@ -73,6 +74,19 @@ namespace VienShops.Controllers
             }
             ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
             return View(sanpham);
+        }
+
+        [HttpPost]
+         [ValidateInput(false)]
+        public ActionResult EditProduct(SANPHAM sanpham)
+        {
+            SANPHAM sanpham1 = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sanpham.MASP);
+            sanpham1.TENSP = sanpham.TENSP;
+
+           //ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
+                Db.SubmitChanges();
+            
+            return RedirectToAction("AdminHome","Admin");
         }
     }
 }
