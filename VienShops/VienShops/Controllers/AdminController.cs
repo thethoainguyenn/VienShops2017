@@ -78,14 +78,43 @@ namespace VienShops.Controllers
 
         [HttpPost]
          [ValidateInput(false)]
-        public ActionResult EditProduct(SANPHAM sanpham)
+        public ActionResult EditProduct(SANPHAM sanpham, HttpPostedFileBase fileUpload)
         {
-            SANPHAM sanpham1 = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sanpham.MASP);
-            sanpham1.TENSP = sanpham.TENSP;
+            SANPHAM sanpham1 = Db.SANPHAMs.SingleOrDefault(n => n.MASP == sanpham.MASP); 
 
-           //ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
-                Db.SubmitChanges();
-            
+            if(fileUpload == null)
+            {
+                sanpham1.TENSP = sanpham.TENSP;
+                sanpham1.MALOAISP = sanpham.MALOAISP;
+                sanpham1.GIA = sanpham.GIA;
+                sanpham1.NGAYCAPNHAT = sanpham.NGAYCAPNHAT;
+                sanpham1.CHATLIEU = sanpham.CHATLIEU;
+                sanpham1.MOTA = sanpham.MOTA;
+            }
+            else
+            {
+                sanpham1.TENSP = sanpham.TENSP;
+                sanpham1.MALOAISP = sanpham.MALOAISP;
+                sanpham1.GIA = sanpham.GIA;
+                sanpham1.NGAYCAPNHAT = sanpham.NGAYCAPNHAT;
+                sanpham1.CHATLIEU = sanpham.CHATLIEU;
+                sanpham1.MOTA = sanpham.MOTA;
+                var fileName = Path.GetFileName(fileUpload.FileName);
+                var path = Path.Combine(Server.MapPath("~/images/products/large"), fileName);
+                if (System.IO.File.Exists(path))
+                {
+                    ViewBag.Notification = "Hình ảnh đã tồn tại";
+                }
+                else
+                {
+                    fileUpload.SaveAs(path);
+                }
+                sanpham1.URL = fileUpload.FileName;
+            }
+          
+
+            ViewBag.MaLoaiSP = new SelectList(Db.LOAISANPHAMs.ToList(), "MaLoaiSP", "TenLoai");
+            Db.SubmitChanges();
             return RedirectToAction("AdminHome","Admin");
         }
     }

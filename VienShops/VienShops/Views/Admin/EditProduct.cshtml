@@ -7,7 +7,7 @@
 
 <h2>Chỉnh sửa sản phẩm</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("EditProduct", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -60,8 +60,10 @@
         <div class="form-group">
             @Html.LabelFor(model => model.URL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.URL, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.URL, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
                 @Html.ValidationMessageFor(model => model.URL, "", new { @class = "text-danger" })
+                <input type="file" name="fileUpload" />
+                @ViewBag.Notification
             </div>
         </div>
 
