@@ -12,6 +12,12 @@ namespace VienShops.Controllers
     public class AdminController : Controller
     {
         DBVienShopsDataContext Db = new DBVienShopsDataContext();
+        
+        public ActionResult Welcome()
+        {
+            return View();
+        }
+
         // GET: Admin
         public ActionResult AdminHome(int? page)
         {

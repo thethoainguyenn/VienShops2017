@@ -606,7 +606,6 @@ C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\Microsof
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\Microsoft.AI.Web.xml
-C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\obj\Debug\VienShops.csprojResolveAssemblyReference.cache
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\obj\Debug\VienShops.Migrations.migration_change.resources
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\obj\Debug\VienShops.Migrations.UpdateUser.resources
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\obj\Debug\VienShops.csproj.GenerateResource.Cache
@@ -615,3 +614,4 @@ C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\obj\Debug\Vi
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\VienShops.dll.config
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\VienShops.dll
 C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\bin\VienShops.pdb
+C:\Users\THOAILUN\Desktop\Working\VienShops2017\VienShops\VienShops\obj\Debug\VienShops.csprojResolveAssemblyReference.cache
