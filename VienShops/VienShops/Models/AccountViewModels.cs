@@ -5,9 +5,9 @@ namespace VienShops.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
         [Display(Name = "Email")]
-		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		[StringLength(255, ErrorMessage = "Email dài tối đat 255 kí tự")]
 		public string Email { get; set; }
     }
 
@@ -42,23 +42,23 @@ namespace VienShops.Models
 
     public class ForgotViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
         [Display(Name = "Email")]
-		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		[StringLength(255, ErrorMessage = "Email tối đa 255 kí tự ")]
 		public string Email { get; set; }
     }
 
 	public class LoginViewModel
 	{
-		[Required]
+		[Required(ErrorMessage = "Bạn Chưa nhập Email")]
 		[Display(Name = "Email")]
 		[EmailAddress]
-		[StringLength(255, ErrorMessage = "Email không được bỏ trống")]
+		[StringLength(255, ErrorMessage = "Email tối đa 255 kí tự ")]
 		public string Email { get; set; }
 
-		[Required]
+		[Required (ErrorMessage = "Bạn chưa nhập mật khẩu ")]
 		[DataType(DataType.Password)]
-		[Display(Name = "Password")]
+		[Display(Name = "Mật khẩu")]
 		public string Password { get; set; }
 
 		[Display(Name = "Remember me?")]
@@ -68,26 +68,26 @@ namespace VienShops.Models
 
     public class RegisterViewModel
     {
-		[Required]
+		[Required(ErrorMessage = "Bạn chưa nhập Tên")]
 		[Display(Name = "Tên")]
 		[StringLength(255)]
 		public string FullName { get; set; }
-		[Required]
+		[Required(ErrorMessage = "Bạn chưa nhập Email")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Mật Khẩu phải có tối đa {0} kí tự và tối thiểu {2} kí tự.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Xác thực mật khẩu")]
         [Compare("Password", ErrorMessage = "Nhập lại mật khẩu không đúng ")]
         public string ConfirmPassword { get; set; }
-		[Required]
+		[Required(ErrorMessage = "Bạn chưa nhập địa chỉ")]
 		[Display(Name = "Địa chỉ")]
 		[StringLength(255)]
 		public string Adress { get; set; }

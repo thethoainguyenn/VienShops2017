@@ -33,6 +33,10 @@
 												@Html.PasswordFor(m => m.Password, new { @class = "form-control" })
 												@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
 											</div>
+												<div class="checkbox">
+													@Html.CheckBoxFor(m => m.RememberMe)
+													@Html.LabelFor(m => m.RememberMe)
+												</div>
 											<p class="forgoten">
 												<a href="@Url.Action("ForgotPassword","Account" )">
 													Forgoten your password?

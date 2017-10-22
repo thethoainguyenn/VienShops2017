@@ -201,6 +201,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -329,6 +330,7 @@
     <Content Include="images\banner-02.jpg" />
     <Content Include="images\banner-small-01.png" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\bill.png" />
     <Content Include="images\black_transparent50.png" />
     <Content Include="images\carticon.png" />
     <Content Include="images\down-arow-2.png" />
@@ -1308,9 +1310,6 @@
     <Content Include="plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="plugins\input-mask\phone-codes\phone-codes.json" />
-    <None Include="Models\DBVienShops.dbml.layout">
-      <DependentUpon>DBVienShops.dbml</DependentUpon>
-    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1328,87 +1327,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\script.min.js" />
-    <Content Include="tinymce\changelog.txt" />
-    <Content Include="tinymce\js\tinymce\jquery.tinymce.min.js" />
-    <Content Include="tinymce\js\tinymce\license.txt" />
-    <Content Include="tinymce\js\tinymce\plugins\advlist\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\anchor\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\autolink\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\autoresize\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\autosave\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\bbcode\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\charmap\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\codesample\css\prism.css" />
-    <Content Include="tinymce\js\tinymce\plugins\codesample\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\code\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\colorpicker\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\contextmenu\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\directionality\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
-    <Content Include="tinymce\js\tinymce\plugins\emoticons\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\fullpage\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\fullscreen\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\help\img\logo.png" />
-    <Content Include="tinymce\js\tinymce\plugins\help\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\hr\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\imagetools\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\image\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\importcss\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\insertdatetime\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\legacyoutput\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\link\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\lists\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\media\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\nonbreaking\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\noneditable\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\pagebreak\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\paste\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\preview\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\print\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\save\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\searchreplace\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\spellchecker\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\tabfocus\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\table\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\template\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\textcolor\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\textpattern\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\toc\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\visualblocks\css\visualblocks.css" />
-    <Content Include="tinymce\js\tinymce\plugins\visualblocks\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\visualchars\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\plugins\wordcount\plugin.min.js" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\content.inline.min.css" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\content.min.css" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\content.mobile.min.css" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.svg" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\img\anchor.gif" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\img\loader.gif" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\img\object.gif" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\img\trans.gif" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\skin.min.css" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\skin.mobile.min.css" />
-    <Content Include="tinymce\js\tinymce\themes\inlite\theme.min.js" />
-    <Content Include="tinymce\js\tinymce\themes\mobile\theme.min.js" />
-    <Content Include="tinymce\js\tinymce\themes\modern\theme.min.js" />
-    <Content Include="tinymce\js\tinymce\tinymce.min.js" />
-    <Content Include="tinymce\LICENSE.TXT" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1459,18 +1377,10 @@
     <Content Include="Views\Search\SearchResults.cshtml" />
     <Content Include="Views\Shared\_Admin.cshtml" />
     <Content Include="Views\Admin\AdminHome.cshtml" />
-    <Content Include="Views\Admin\AddProductNew.cshtml" />
-    <Content Include="tinymce\js\tinymce\langs\readme.md" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-mobile.woff" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.eot" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
-    <Content Include="tinymce\js\tinymce\skins\lightgray\fonts\tinymce.woff" />
-    <Content Include="Views\Admin\EditProduct.cshtml" />
-    <Content Include="Views\Admin\DeleteProduct.cshtml" />
-    <Content Include="Views\Admin\Welcome.cshtml" />
+    <Content Include="Views\Order\Order.cshtml" />
+    <Content Include="Views\Order\InfoCart.cshtml" />
+    <Content Include="Views\Order\ConfirmOrder.cshtml" />
+    <Content Include="Views\Order\ManageOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1495,6 +1405,9 @@
     <EmbeddedResource Include="Migrations\201710132158575_UpdateUser.resx">
       <DependentUpon>201710132158575_UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Models\DBVienShops.dbml.layout">
+      <DependentUpon>DBVienShops.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
